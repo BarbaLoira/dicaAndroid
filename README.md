@@ -110,14 +110,14 @@ progressBar = new ProgressBar(youractivity.this,null,android.R.attr.progressBarS
 
 ```
 
-para desabilitar a interação do usuário basta colocar:
+para <b> desabilitar </b> a interação do usuário basta colocar:
 
 ```java
 getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
                            WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
 ```
 
-para habilitar novamente a interação do usuário:
+para <b> habilitar</b> novamente a interação do usuário:
 ```java
 getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
 ```
