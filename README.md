@@ -45,16 +45,16 @@ Removendo fragmento :
         .add(R.id.rl_content_main, new Fragment()).addToBackStack(null).commit();
 ```
     
- ### 2 - ButterKnife
+ ### 3 - ButterKnife
 
-#### 2.1 - Adcionando em Gradle - App
+#### 3.1 - Adcionando em Gradle - App
 
 ```gradle
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 ```
 
-#### 2.2 - Como usar na classe
+#### 3.2 - Como usar na classe
 
 ```java
 import butterknife.BindView;
@@ -74,5 +74,59 @@ public class ExampleActivity extends AppCompatActivity {
     }       
 }
 ```
+ ### 4 - Progress  (* ProgressDialog API level 26 is deprecated )
+ 
+ É possivel colocar o progress de forma estática ou dinâmica.
+
+#### 4.1 - Componente xml - estática
+
+```xml
+<ProgressBar
+    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+```
+
+#### 4.2 - Componente xml - dinâmica
 
 
+```java
+
+RelativeLayout layout = findViewById(R.id.display); //specify here Root layout Id
+
+(or)
+
+RelativeLayout layout = findViewById(this);
+
+(and)
+
+progressBar = new ProgressBar(youractivity.this,null,android.R.attr.progressBarStyleLarge);
+ RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(100,100);
+ params.addRule(RelativeLayout.CENTER_IN_PARENT);
+ layout.addView(progressBar,params);
+ 
+ progressBar.setVisibility(View.VISIBLE);  //To show ProgressBar
+ progressBar.setVisibility(View.GONE);     // To Hide ProgressBar
+
+```
+
+para desabilitar a interação do usuário basta colocar:
+
+```java
+getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                           WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+```
+
+para habilitar novamente a interação do usuário:
+```java
+getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+```
+
+#### 4.3 - Criando estilo para manter a cor padrão
+
+```xml
+<style name="LinearProgress" parent="Theme.AppCompat.Light">
+    <item name="colorAccent">@color/indigo</item>
+    <item name="android:progressBackgroundTint">@color/pink</item>
+</style>
+```
