@@ -2,7 +2,7 @@
 # <Strong>Dicas sobre desevolver apps android </Strong>
 
 
-### 1 - Layout Customizados
+### 1 - Action bar
 
 #### 1.1 -  Como tirar o action bar
 
