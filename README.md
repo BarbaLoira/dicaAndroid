@@ -2,6 +2,9 @@
 # <Strong>Dicas sobre desevolver apps android </Strong>
 
 
+* Antes de destrinchar um pouco sobre algumas coisas essencias na contrução do app android aqui vai uma dica show de bola,
+este site https://android-arsenal.com/tag/59?sort=rating  ele reuni implementações sobre para android com varias dicas, como exemplo se você clicar neste link ele mostrar um filtro sobre mapas, vale a pena dar uma olhada.
+
 ### 1 - Action bar
 
 #### 1.1 -  Como tirar o action bar
@@ -144,5 +147,9 @@ A seguir alguns links de Maps que poderão lhe ajudar sobre como manter mapa off
 ➙ Add-ons para o Android Google Maps API v2 framework: https://github.com/cocoahero/android-gmaps-addons
 
 ➙ Conteúdo Stack Overflow de como colocar offline mode no Google Maps: https://stackoverflow.com/a/14833256/2578331
+
+
+
+
 
  
