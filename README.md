@@ -149,6 +149,13 @@ A seguir alguns links de Maps que poderão lhe ajudar sobre como manter mapa off
 ➙ Conteúdo Stack Overflow de como colocar offline mode no Google Maps: https://stackoverflow.com/a/14833256/2578331
 
 
+### Cores
+
+A Google tem padrões para cores do android o site abaixo mantém este padrão e é muito facil usa-lo
+
+https://www.materialpalette.com/
+
+
 
 
 
