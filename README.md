@@ -130,3 +130,19 @@ getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
     <item name="android:progressBackgroundTint">@color/pink</item>
 </style>
 ```
+### 5 Mapa Offline
+ 
+
+A seguir alguns links de Maps que poderão lhe ajudar sobre como manter mapa offline:
+
+➙ Offline Maps API for Android: https://github.com/mapsme/api-android
+
+➙ MapBox offline maps: https://www.mapbox.com/help/mobile-offline/
+
+➙ APIs de mapa, algumas com suporte offline: https://android-arsenal.com/tag/59?sort=rating
+
+➙ Add-ons para o Android Google Maps API v2 framework: https://github.com/cocoahero/android-gmaps-addons
+
+➙ Conteúdo Stack Overflow de como colocar offline mode no Google Maps: https://stackoverflow.com/a/14833256/2578331
+
+ 
