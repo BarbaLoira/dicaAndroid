@@ -156,6 +156,25 @@ A Google tem padrões para cores do android o site abaixo mantém este padrão e
 https://www.materialpalette.com/
 
 
+### Imagem / Foto 
+
+### Cortar imagem
+
+É impressendivel usar alguma biblioteca de terceiros para usar na app, pois nem todos dos dispositivos aceitam o CROP :
+
+```java
+  Intent cropIntent = new Intent("com.android.camera.action.CROP");
+```
+
+comentários do stack sobre isso : 
+
+https://stackoverflow.com/questions/45094968/android-crop-image-using-com-android-camera-action-crop-crash-in-htc-and-google
+
+video que super recomendo sobre o EDIMODO CROPPER :
+
+https://www.youtube.com/watch?v=pFurCTMEiQY
+
+
 
 
 
