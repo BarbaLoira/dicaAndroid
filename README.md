@@ -176,6 +176,68 @@ https://www.youtube.com/watch?v=pFurCTMEiQY
 
 
 
+## Erros e soluções
+
+### FileUriExposedException
+
+Este problema está relacionado ao SDK Version do android, pois da versão 24 para cima o tratamento com os arquivos foram modificados, desta forma é necessario usar o ```java FileProvider ```, abaixo segue os passos para adaptar seu codigo ao novo tratamento de arquivo:
+
+
+1 ➙ Adcionar na classe que usa o arquivo a herança do   ```java FileProvider ```
+
+     ```java
+     public class GenericFileProvider extends FileProvider {} 
+     ```
+
+2 ➙ Adcionar um FileProvider tag no AndroidManifest.xml
+
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    ...
+    <application
+        ...
+        <provider
+            android:name=".GenericFileProvider"
+            android:authorities="${applicationId}.my.package.name.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+    </application>
+</manifest>
+```
+
+
+3 ➙ Após fazer isto você deve criar um arquivo xml  ```java @xml/provider_paths ``` dentro de  ```java res/xml``` , talvez a pasta necessite ser criada caso não exista, o conteúdo descreve como compartilhar o acesso ao armazenamento externo a pasta raiz ```java (path=".")``` com o nome <Strong> external_files </Strong> 
+
+```xml
+  <?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path name="external_files" path="."/>
+</paths>
+```
+
+4 ➙ Finalmente o ultimo passo você deve modificar a forma de como recuperar o arquivo, seja ele Uri ou outro tipo de arquivo ou pasta mas a lógica é a mesma:
+
+```java
+Uri photoURI = FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".my.package.name.provider", createImageFile());
+
+```
+
+.md Observação: Caso você queira abrir o arquivo, você necessita adcionar ao intent a seguinte <Strong>Flag</Strong>:
+
+```java
+intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+```
+
+
+
+
+
 
 
  
