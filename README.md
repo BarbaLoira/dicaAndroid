@@ -1,9 +1,13 @@
  
 # <Strong>Dicas sobre desevolver apps android </Strong>
 
+## Observações iniciais
 
 * Antes de destrinchar um pouco sobre algumas coisas essencias na contrução do app android aqui vai uma dica show de bola,
 este site https://android-arsenal.com/tag/59?sort=rating  ele reuni implementações sobre para android com varias dicas, como exemplo se você clicar neste link ele mostrar um filtro sobre mapas, vale a pena dar uma olhada.
+
+* Google colocou umas regras apartir do android oreo principalmente para o targetsdkversion, antes de subir seu app para a loja, atualize-se sobre isso, segue o link com mais informações
+https://medium.com/iterative/mundan%C3%A7as-para-regras-do-targetsdkversion-no-android-328a050a600c
 
 ### 1 - Action bar
 
