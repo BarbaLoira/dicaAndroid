@@ -153,6 +153,50 @@ A seguir alguns links de Maps que poderão lhe ajudar sobre como manter mapa off
 ➙ Conteúdo Stack Overflow de como colocar offline mode no Google Maps: https://stackoverflow.com/a/14833256/2578331
 
 
+### 6 Badge
+
+Simples badge em circulo usando um textview como conteúdo
+
+1 ➙ Você precisa criar um arquivo drawable para fazer o "shape"
+
+```xml
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <solid android:color="#F44336" />
+
+    <size
+        android:height="24dp"
+        android:width="24dp" />
+
+</shape>
+```
+
+2 ➙ Por fim setar em seu textview o drawable 
+Observação : se mudar o tamanho do circulo ou textview, manter sempre a proporção dos dois,  shapecicle.size= 2*textview.size 
+
+
+```xml
+ <TextView
+        android:id="@+id/unread_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|right"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/text_badge_menu"
+        android:gravity="center"
+        android:text="12"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+       
+        />
+
+```
+
+
+
 ### Cores
 
 A Google tem padrões para cores do android o site abaixo mantém este padrão e é muito facil usa-lo
